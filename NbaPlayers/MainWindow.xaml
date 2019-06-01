@@ -1,0 +1,23 @@
+﻿<Window x:Class="NbaPlayers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NbaPlayers"
+        mc:Ignorable="d"
+        Title="Nba Player App" Height="450" Width="300"
+        >
+    <Grid Loaded="Grid_Loaded">
+        <ComboBox x:Name="position_comboBox" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Position_comboBox_SelectionChanged"/>
+        <Label Content="Filter by position" HorizontalAlignment="Left" Margin="15,64,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" FontSize="14"/>
+        <ListBox x:Name="players_listBox" HorizontalAlignment="Left" Height="220" Margin="15,118,0,0" VerticalAlignment="Top" Width="262"/>
+        <Button x:Name="prev_button" Content="Previous" HorizontalAlignment="Left" Margin="15,367,0,0" VerticalAlignment="Top" Width="75" Click="Prev_button_Click"/>
+        <Button x:Name="next_button" Content="Next" HorizontalAlignment="Left" Margin="202,367,0,0" VerticalAlignment="Top" Width="75" Click="Next_button_Click"/>
+        <Label Content="Players" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="40" Width="81" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Current Page:" HorizontalAlignment="Left" Margin="15,339,0,0" VerticalAlignment="Top" Width="75" Height="28" FontSize="10"/>
+        <Label x:Name="label_currentPage" Content="#" HorizontalAlignment="Left" Margin="95,339,0,0" VerticalAlignment="Top" FontSize="10" Height="28" Width="35"/>
+        <TextBox x:Name="textBox_goToPage" HorizontalAlignment="Left" Height="23" Margin="202,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" KeyUp="TextBox_goToPage_KeyUp"/>
+        <Label Content="Go To #:" HorizontalAlignment="Left" Margin="152,339,0,0" VerticalAlignment="Top" FontSize="10"/>
+
+    </Grid>
+</Window>
